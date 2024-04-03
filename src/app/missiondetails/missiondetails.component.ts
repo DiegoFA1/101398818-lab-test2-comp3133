@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { SpaceXService } from '../network/space-x.service';
 import { Mission } from '../models/Mission';
 import { NgIf } from '@angular/common';
+import {MatCardModule} from '@angular/material/card'; 
 
 @Component({
   selector: 'app-missiondetails',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, MatCardModule],
   templateUrl: './missiondetails.component.html',
   styleUrl: './missiondetails.component.css'
 })

@@ -1,16 +1,29 @@
 <div class="missionListBody">
     <div class="filterSection">
-        <h2>Date selection</h2>       
+        <h2>Date selection</h2>   
+        <div class="yearsContainer">
+            <div *ngFor="let year of yearList">
+                <button mat-raised-button color="primary" class="yearbutton" (click)="showListByYear(year)">{{ year }}</button>
+            </div>
+        </div>
     </div>
+
     <div class="missionList">
-        <div class="missionCard" *ngFor="let mission of missionList">
+
+        <mat-card class="missionCard" *ngFor="let mission of missionList">
+
             <button (click)="showDetails(mission.flight_number)">
-                <img [src]="mission.links.mission_patch_small" alt="Mission Patch">
-                <p>{{ mission.mission_name }}</p>
+                <img mat-card-xl-image [src]="mission.links.mission_patch_small" alt="Mission Patch">
+            </button>
+            <mat-card-title>
+                {{ mission.mission_name }}
+            </mat-card-title>
+            <mat-card-content>
                 <p>{{ mission.launch_year }}</p>
                 <p>{{ mission.details }}</p>
-            </button>
-        </div>
+            </mat-card-content>
+            
+        </mat-card>
           
     
     </div>

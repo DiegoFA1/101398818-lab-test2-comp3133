@@ -2,26 +2,38 @@
   <div class="detailPage">
     <h1>Mission Details</h1>
 
-    <div class="detailContent">
+    <mat-card class="detailContent">
+
       <div class="detailBody">
-        <div class="detailImage">
-          <img [src]="mission.links.mission_patch_small" alt="Mission Patch" />
+
+        <div>
+          <img mat-card-xl-image [src]="mission.links.mission_patch_small" alt="Mission Patch" />
         </div>
 
-        <div class="detailDescription">
-          <h2>Mission - {{ mission.mission_name }}</h2>
-          <p>Launch Year: {{ mission.launch_year }}</p>
+        <div>
+          <mat-card-title>Mission - {{ mission.mission_name }}</mat-card-title>
+          <mat-card-content>
+            <p>Launch Year: {{ mission.launch_year }}</p>
+          </mat-card-content>
 
-          <h2>Rocket</h2>
-          <p>Name: {{ mission.rocket.rocket_name }}</p>
-          <p>Type: {{ mission.rocket.rocket_type }}</p>
+          <mat-card-subtitle>Rocket</mat-card-subtitle>
+          <mat-card-content>
+            <p>Name: {{ mission.rocket.rocket_name }}</p>
+            <p>Type: {{ mission.rocket.rocket_type }}</p>
+          </mat-card-content>
 
-          <h2>Launch Site</h2>
-          <p>Name: {{ mission.launch_site.site_name_long }}</p>
+          <mat-card-subtitle>Launch Site</mat-card-subtitle>
+          <mat-card-content>
+            <p>Name: {{ mission.launch_site.site_name_long }}</p>
+          </mat-card-content>
         </div>
+
       </div>
-      <h2>Launch Details</h2>
-      <p>{{mission.details}} </p>
-    </div>
+
+      <mat-card-subtitle>Launch Details</mat-card-subtitle>
+      <p *ngIf="mission.details; else elseBlock">{{mission.details}} </p>
+      <ng-template #elseBlock> <p>No details available</p> </ng-template>
+    </mat-card>
+    
   </div>
 </div>
