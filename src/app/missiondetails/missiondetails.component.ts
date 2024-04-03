@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SpaceXService } from '../network/space-x.service';
-import { Mission } from '../models/Mission';
+import { Mission } from '../models/mission';
 import { NgIf } from '@angular/common';
 import {MatCardModule} from '@angular/material/card'; 
 

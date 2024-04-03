@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SpaceXService } from '../network/space-x.service';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
-import { MissionLaunch } from '../models/Mission';
+import { MissionLaunch } from '../models/mission';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card'; 
 
