@@ -1,0 +1,33 @@
+.detailPage{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.detailBody{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+}
+
+.detailContent{
+    background-color: #f2f2f2;
+    padding: 15px;
+}
+.detailDescription{
+    
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #00308F;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #00308F;
+}

@@ -1,21 +1,24 @@
 import { Component } from '@angular/core';
 import { SpaceXService } from '../network/space-x.service';
+import { Mission } from '../models/Mission';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-missiondetails',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './missiondetails.component.html',
   styleUrl: './missiondetails.component.css'
 })
 export class MissiondetailsComponent {
-  mission: any;
+  mission: Mission = {} as Mission;
+
   mission_flight_number = history.state.mission_flight_number
 
   constructor(private spaceXService: SpaceXService) { }
 
   ngOnInit() {
-    this.spaceXService.getMissionListByFlightNumber(this.mission_flight_number).subscribe((data) => {
+    this.spaceXService.getMissionListByFlightNumber(this.mission_flight_number).subscribe((data: Mission) => {
       this.mission = data;
     });
   }

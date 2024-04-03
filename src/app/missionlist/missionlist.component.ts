@@ -33,22 +33,3 @@ export class MissionlistComponent {
 
 
 }
-
-
-class MissionInfo{
-
-  missionName: string;
-  launchYear: number;
-  details: string;
-  mission_patch_small: string;
-
-  constructor(public givenMissionName: string, public givenLaunchYear: number, public givenDetails: string, public givenMission_patch_small:string) {
-    this.missionName = givenMissionName;
-    this.launchYear = givenLaunchYear;
-    this.details = givenDetails;
-    this.mission_patch_small = givenMission_patch_small;
-  }
-
-
-
-}
