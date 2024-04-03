@@ -1,0 +1,17 @@
+<div class="missionListBody">
+    <div class="filterSection">
+        <h2>Date selection</h2>       
+    </div>
+    <div class="missionList">
+        <div class="missionCard" *ngFor="let mission of missionList">
+            <button (click)="showDetails(mission.flight_number)">
+                <img [src]="mission.links.mission_patch_small" alt="Mission Patch">
+                <p>{{ mission.mission_name }}</p>
+                <p>{{ mission.launch_year }}</p>
+                <p>{{ mission.details }}</p>
+            </button>
+        </div>
+          
+    
+    </div>
+</div>
