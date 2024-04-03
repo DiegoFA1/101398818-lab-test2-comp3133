@@ -9,22 +9,16 @@
     </div>
 
     <div class="missionList">
-
         <mat-card class="missionCard" *ngFor="let mission of missionList">
-
             <button (click)="showDetails(mission.flight_number)">
                 <img mat-card-xl-image [src]="mission.links.mission_patch_small" alt="Mission Patch">
             </button>
-            <mat-card-title>
-                {{ mission.mission_name }}
-            </mat-card-title>
+            <mat-card-title>{{ mission.mission_name }}</mat-card-title>
             <mat-card-content>
-                <p>{{ mission.launch_year }}</p>
-                <p>{{ mission.details }}</p>
+                <p>Year: {{ mission.launch_year || '-' }}</p>
+                <p>Details: {{ mission.details || '-' }}</p>
             </mat-card-content>
-            
         </mat-card>
-          
-    
     </div>
+    
 </div>

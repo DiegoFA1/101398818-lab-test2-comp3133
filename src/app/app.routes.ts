@@ -4,9 +4,11 @@ import { MissiondetailsComponent } from './missiondetails/missiondetails.compone
 
 export const routes: Routes = [
 
-    { path: '', redirectTo: 'missions', pathMatch: 'full'},
-    { path: 'missions', component: MissionlistComponent },
-    { path: 'missiondetails', component: MissiondetailsComponent}
+    { path: '', redirectTo: 'missionlist', pathMatch: 'full' },
+    { path: 'missionlist', component: MissionlistComponent },
+    { path: 'missiondetails', component: MissiondetailsComponent },
+    { path: '**', redirectTo: 'missionlist'}
+
 
 
 ];
